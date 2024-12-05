@@ -1,11 +1,11 @@
-const API_URL = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=2&api_key=96cde52316a9e478e9312e7c06d4dfff";
-const imgPath = "https://image.tmdb.org/t/p/w500";
-const searchAPI = "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=96cde52316a9e478e9312e7c06d4dfff&query=";
+const API_URL = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=your_api_key`;
+const imgPath = `https://image.tmdb.org/t/p/w500`;
+const searchAPI = `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=your_api_key&query=`;
 
 generateMovies(API_URL);
 
-async function generateMovies(URL) {
-  const response = await fetch(URL);
+async function generateMovies(url) {
+  const response = await fetch(url);
   const responseData = await response.json();
   let movieCardHTML = "";
   console.log(responseData.title);
@@ -39,27 +39,3 @@ document.querySelector('.js-search-box')
       generateMovies(searchAPI + searchKeywords);
     }
   });
-
-function testFunc() {
-  let movieCardHTML = "";
-
-  for (let index = 0; index <10; index++) {
-    movieCardHTML += `
-      <div class="movie-desc">
-        <div class="thumbnail-container">
-          <img src="./sample-img.jpg" class="thumbnail">
-        </div>
-        
-        <div class="movie-title">
-          Movie Title
-        </div>
-      </div>
-    `;
-
-  }
-    
-  document.querySelector('.js-movie-grid')
-    .innerHTML = movieCardHTML;
-}
-
-//testFunc();
