@@ -80,7 +80,6 @@ body {
   width: 100%;
   border-radius: 12px;
   float: left;
-  overflow: hidden;
 }
 
 .movie-title {
