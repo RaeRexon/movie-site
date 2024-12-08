@@ -1,5 +1,5 @@
-const api_key = '';
-const API_URL = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${api_key}`;
+import { api_key } from "./api-key.js";
+const API_URL = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=3&api_key=${api_key}`;
 const imgPath = `https://image.tmdb.org/t/p/w500`;
 const searchAPI = `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${api_key}&query=`;
 

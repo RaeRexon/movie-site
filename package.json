@@ -1,0 +1,12 @@
+{
+  "name": "movie-site",
+  "version": "1.0.0",
+  "description": "All sorts of movies, tv shows etc.",
+  "main": "api-key.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

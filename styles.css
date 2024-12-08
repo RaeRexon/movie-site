@@ -68,10 +68,12 @@ body {
   margin: auto;
   align-items: center;
   justify-content: center;
+  height: 380px;
+  justify-content: space-between;
 }
 
 .thumbnail-container {
-  height: 290px;
+  height: 320px;
   width: 230px;
   overflow: hidden;
 }
@@ -80,13 +82,18 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 12px;
-  float: left;
 }
 
 .movie-title {
   padding-top: 12px;
   color: #ffffff;
   width:200px;
+  height: 3em;
+  line-height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .movie-grid {
@@ -94,6 +101,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+  align-items: stretch;
 }
 
 .js-loading-spinner {
